@@ -41,10 +41,10 @@ export class MovieList extends Component {
 
     let movieItem = this.state.movies.map((movie) => {
       return (
-        <li key={movie.imdbID}>
-          <img src={movie.Poster} />
-          <h4>{movie.Title}</h4>
-        </li>
+          <li key={movie.imdbID}>
+            <img id="moviePoster" src={movie.Poster} alt={movie.Title}/>
+            <label id="movieTitle">{movie.Title}</label>
+          </li>
       )
     })
 

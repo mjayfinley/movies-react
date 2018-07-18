@@ -1,0 +1,37 @@
+
+
+#moviePoster {
+  display:flex;
+
+  height: 125px;
+  width: 100px;
+  padding: 10px;
+
+
+}
+
+#movieTitle {
+  display:flex;
+  flex-wrap: wrap;
+  width: 100px;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 16px;
+
+
+}
+
+li {
+  list-style: none
+
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#container h1 {
+  text-align: center;
+}
