@@ -38,8 +38,9 @@ class App extends Component {
     .then((response) => response.json())
     .then((json) => {
 
+      console.log(json)
       this.setState({
-        movieDetails : this.state.movieDetails.concat(json)
+        movieDetails : [json]
       })
     })
   }
@@ -52,6 +53,7 @@ class App extends Component {
   handleShowMovieDetails = ((movie) => {
 
     this.populateMovieDetails(movie)
+
 
   })
 
