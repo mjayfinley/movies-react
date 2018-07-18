@@ -17,7 +17,7 @@ export class MovieList extends Component {
       return (
           <li key={movie.imdbID}>
             <img id="moviePoster" src={movie.Poster} alt={movie.Title}/>
-            <a id="movieTitle" href="#" onClick={() => this.handleShowMovieDetailsClick(movie)}>{movie.Title}</a>
+            <button id="movieTitle" onClick={() => this.handleShowMovieDetailsClick(movie)}>{movie.Title}</button>
           </li>
       )
     })
@@ -27,3 +27,6 @@ export class MovieList extends Component {
     )
   }
 }
+
+
+//href={`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=b70d5171`}

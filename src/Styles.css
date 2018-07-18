@@ -14,9 +14,11 @@
   display:flex;
   flex-wrap: wrap;
   width: 100px;
-  padding: 10px;
+  height: auto;
+  margin-left: 10px;
   font-family: sans-serif;
   font-size: 16px;
+  text-align: center;
 
 
 }
@@ -34,4 +36,20 @@ ul {
 
 #container h1 {
   text-align: center;
+}
+
+#movieDetailsContainer {
+  font-family: sans-serif;
+  font-size: 24px;
+  width: 100%;
+
+}
+
+#bigMoviePoster {
+  float:left;
+}
+
+#movieDetails {
+  padding: 50px;
+  margin-left: 300px;
 }

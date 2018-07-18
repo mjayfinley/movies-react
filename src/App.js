@@ -30,13 +30,28 @@ class App extends Component {
     })
   }
 
+  populateMovieDetails(movie) {
+
+    let movieID = movie.imdbID
+
+    fetch("http://www.omdbapi.com/?i="+movieID+"&apikey=b70d5171")
+    .then((response) => response.json())
+    .then((json) => {
+
+      this.setState({
+        movieDetails : this.state.movieDetails.concat(json)
+      })
+    })
+  }
+
+
   componentDidMount() {
     this.populateMovies()
   }
 
   handleShowMovieDetails = ((movie) => {
 
-    console.log(movie)
+    this.populateMovieDetails(movie)
 
   })
 
@@ -47,7 +62,7 @@ class App extends Component {
 
         <MovieList movieList={this.state.movies} handleShowMovieDetails={this.handleShowMovieDetails} />
 
-        <Movie />
+        <Movie movieDetail={this.state.movieDetails}/>
 
       </div>
 
