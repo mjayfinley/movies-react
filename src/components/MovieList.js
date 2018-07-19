@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 export class MovieList extends Component {
 
-  //http://www.omdbapi.com/?s=batman&apikey=b70d5171
-
   handleShowMovieDetailsClick = ((movie) => {
 
     this.props.handleShowMovieDetails(movie)
@@ -27,6 +25,3 @@ export class MovieList extends Component {
     )
   }
 }
-
-
-//href={`http://www.omdbapi.com/?i=${movie.imdbID}&apikey=b70d5171`}
